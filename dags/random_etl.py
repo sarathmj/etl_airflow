@@ -2,9 +2,9 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.dummy import DummyOperator
 from datetime import datetime, timedelta
-from data_ingestion import data_ingestion
-from data_transform import data_transform
-from data_load import data_load
+from data_ingestion import extract_data
+from data_transform import transform_data
+from data_load import load_data
 
 # Default arguments for the DAG
 default_args = {
@@ -34,21 +34,21 @@ start = DummyOperator(
 
 extract_task = PythonOperator(
     task_id='extract_from_api',
-    python_callable=data_ingestion,
+    python_callable=extract_data,
     provide_context=True,
     dag=dag,
 )
 
 transform_task = PythonOperator(
     task_id='transform_data',
-    python_callable=data_transform,
+    python_callable=transform_data,
     provide_context=True,
     dag=dag,
 )
 
 load_task = PythonOperator(
     task_id='load_to_postgres',
-    python_callable=data_load,
+    python_callable=load_data,
     provide_context=True,
     dag=dag,
 )
