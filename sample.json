@@ -1,0 +1,58 @@
+[
+    {
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Dean",
+            "last": "Carroll"
+        },
+        "location": {
+            "street": {
+                "number": 8947,
+                "name": "Richmond Park"
+            },
+            "city": "Celbridge",
+            "state": "Galway",
+            "country": "Ireland",
+            "postcode": 27580,
+            "coordinates": {
+                "latitude": "3.0872",
+                "longitude": "-154.7176"
+            },
+            "timezone": {
+                "offset": "-2:00",
+                "description": "Mid-Atlantic"
+            }
+        },
+        "email": "dean.carroll@example.com",
+        "login": {
+            "uuid": "326ea343-518b-4fec-ac21-01030e134664",
+            "username": "blackbird106",
+            "password": "senator",
+            "salt": "uhIS85WA",
+            "md5": "34af7785495d3cb77a4a4d7dc5e26879",
+            "sha1": "07c2924ab8cb8168988296554b3a93cf4f190d81",
+            "sha256": "731781ef25571d394ab28fb83ea79c5bdbf67c199e810b23105a07dcd04a1162"
+        },
+        "dob": {
+            "date": "1948-06-01T07:01:38.931Z",
+            "age": 76
+        },
+        "registered": {
+            "date": "2002-08-26T01:18:38.695Z",
+            "age": 22
+        },
+        "phone": "011-802-2442",
+        "cell": "081-575-2483",
+        "id": {
+            "name": "PPS",
+            "value": "8827820T"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/19.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/19.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/19.jpg"
+        },
+        "nat": "IE"
+    }
+]

@@ -1,4 +1,5 @@
 import requests
+import json
 
 def fetch_random_users(num_users=5):
     url = f"https://randomuser.me/api/?results={num_users}"
@@ -12,6 +13,16 @@ def fetch_random_users(num_users=5):
 
 # Test the function
 if __name__ == "__main__":
-    users = fetch_random_users(5)
-    for user in users:
-        print(f"Name: {user['name']['first']} {user['name']['last']}, Email: {user['email']}")
+    users = fetch_random_users(1)
+    # print(type(users))
+    
+    # Serializing json
+    json_object = json.dumps(users, indent=4)
+    # Writing to sample.json
+    with open("sample.json", "w") as outfile:
+        outfile.write(json_object)
+        
+
+    
+    # for user in users:
+    #     print(f"Name: {user['name']['first']} {user['name']['last']}, Email: {user['email']}")
